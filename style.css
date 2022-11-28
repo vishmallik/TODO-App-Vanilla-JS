@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --bgr: rgb(245, 245, 245);
+  --accent: rgb(234, 215, 215);
+  --placeholder: rgb(230, 230, 230);
+  --text: rgb(119, 119, 137);
+}
+body {
+  background-color: rgb(245, 245, 245);
+  font-family: "Noto Sans", sans-serif;
+}
+.container {
+  width: 30%;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+h1 {
+  color: var(--accent);
+  font-size: 7rem;
+  margin: 0;
+  font-weight: 500;
+}
+.textfield > input {
+  height: 4rem;
+  width: 100%;
+  padding-left: 4rem;
+  font-size: 1.5rem;
+  border: 0;
+
+  border-bottom: 1px solid var(--placeholder);
+}
+
+.textfield > input:focus {
+  outline: 0;
+}
+.textfield > input::placeholder {
+  color: var(--placeholder);
+  font-style: italic;
+}
+.textfield {
+  position: relative;
+}
+
+.textfield > i {
+  position: absolute;
+  cursor: pointer;
+  left: 1rem;
+  top: 30%;
+  color: var(--placeholder);
+  font-size: 2rem;
+  display: none;
+}
+.parent {
+  box-shadow: 0px 20px 30px 1px rgba(0, 0, 0, 0.04);
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+footer {
+  margin-top: 2rem;
+}
+small {
+  color: var(--text);
+  line-height: 1.5rem;
+  font-weight: 200;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 2rem 1rem 0.5rem;
+  list-style: none;
+  text-align: left;
+  max-width: 100%;
+  border-bottom: 1px solid var(--placeholder);
+  position: relative;
+  background-color: rgb(253, 246, 246);
+}
+
+li > span {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.fa-xmark {
+  font-size: 1.2rem;
+  color: var(--accent);
+  padding: 0 1rem;
+  position: absolute;
+  vertical-align: middle;
+  right: 0%;
+  visibility: hidden;
+}
+.status {
+  display: none;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 1rem;
+  background-color: #fff;
+}
+.tab {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+.tab > span {
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.status > {
+  width: 33%;
+}
+.status > span:last-child {
+  visibility: hidden;
+  cursor: pointer;
+}
+.selected {
+  border: 1px solid rgb(175, 140, 140);
+  background-color: var(--accent);
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  .container {
+    width: 70%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.fa-xmark:hover {
+  color: red;
+  cursor: pointer;
+}
+.fa-github {
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: black;
+}
+.fa-github:hover {
+  color: rgb(175, 140, 140);
+}
